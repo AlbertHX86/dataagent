@@ -11,7 +11,8 @@ from dotenv import load_dotenv
 from api import upload, analysis, prediction, user
 
 # 加载环境变量
-load_dotenv()
+load_dotenv()  # 先加载.env
+load_dotenv('.env.local')  # 再加载.env.local（会覆盖.env中的同名变量）
 
 # 创建FastAPI应用
 app = FastAPI(

@@ -39,9 +39,17 @@ ENV/
 # Data files
 uploads/
 *.csv
-*.json
 *.txt
 !requirements.txt
+
+# JSON files - exclude package.json and tsconfig.json
+*.json
+!package.json
+!package-lock.json
+!tsconfig.json
+!**/package.json
+!**/package-lock.json
+!**/tsconfig.json
 
 # Logs
 *.log

@@ -42,13 +42,11 @@ uploads/
 *.txt
 !requirements.txt
 
-# JSON files - exclude package.json and tsconfig.json
-*.json
-!package.json
-!package-lock.json
-!tsconfig.json
+# JSON files - only ignore data JSON files
+# Allow frontend configuration JSONs
+**/*.json
 !**/package.json
-!**/package-lock.json
+!**/package-lock.json  
 !**/tsconfig.json
 
 # Logs

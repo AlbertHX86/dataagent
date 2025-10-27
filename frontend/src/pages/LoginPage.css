@@ -1,0 +1,99 @@
+.login-page {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+
+.login-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  z-index: -1;
+}
+
+.login-container {
+  display: flex;
+  gap: 48px;
+  padding: 24px;
+  max-width: 900px;
+  width: 100%;
+  animation: fadeIn 0.5s ease-in;
+}
+
+.login-card {
+  flex: 1;
+  max-width: 450px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+  border-radius: 16px;
+}
+
+.login-header {
+  text-align: center;
+  margin-bottom: 32px;
+}
+
+.login-icon {
+  font-size: 64px;
+  color: #1890ff;
+  margin-bottom: 16px;
+}
+
+.login-footer {
+  text-align: center;
+  margin-top: 16px;
+}
+
+.demo-hint {
+  text-align: center;
+  padding: 16px;
+  background: #f0f2f5;
+  border-radius: 8px;
+  margin-top: 24px;
+}
+
+.features-showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.feature-showcase-card {
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.1);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .login-container {
+    flex-direction: column;
+    gap: 24px;
+  }
+
+  .login-card {
+    max-width: 100%;
+  }
+
+  .features-showcase {
+    display: none;
+  }
+}
+

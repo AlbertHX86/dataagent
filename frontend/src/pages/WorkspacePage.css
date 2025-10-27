@@ -1,0 +1,53 @@
+.workspace-page {
+  animation: fadeIn 0.5s ease-in;
+}
+
+.workspace-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 24px;
+}
+
+.work-record-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.work-record-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.15);
+}
+
+.record-cover {
+  height: 150px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, #667eea15 0%, #764ba215 100%);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* 响应式设计 */
+@media (max-width: 768px) {
+  .workspace-header {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .workspace-header > div:last-child {
+    width: 100%;
+  }
+
+  .workspace-header button {
+    width: 100%;
+  }
+}
+
